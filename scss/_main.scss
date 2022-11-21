@@ -1,0 +1,40 @@
+.btnArea{
+  position:absolute;
+  bottom: 0px;
+  right: 0px;
+  padding: 0 44px 48px 0;
+  a{
+    @include btn_shadow(280px, 88px, $fz_lg, $lh_sm, 20px);    
+  };
+};
+.img_card2{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+};
+.img_card3{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+};
+.img_dice{
+  position: absolute;
+  top: 317px;
+  right: 81px;
+};
+.img_coin{
+  position: absolute;
+  top: 47px;
+  left: 599px;
+};
+.img_coin_black{
+  position: absolute;
+  top: 307px;
+  left: 47px;
+};
+.img_coin_re{
+  position: absolute;
+  bottom: 21px;
+  left: 640px;
+  transform: rotate(130deg);
+};

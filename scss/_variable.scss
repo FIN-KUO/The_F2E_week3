@@ -1,0 +1,42 @@
+﻿/*RWD*/
+$sm : 375px; //mobile
+$md : 768px; //pad
+$lg : 1024px; //laptop
+// $xl : 1280px; //table
+
+/*color*/
+$c_text:
+(
+  primary_light : #FFFFFF,
+  primary_dark : #000000,
+  second : #9C0700,
+);
+$c_bg:
+(
+  color1 : #F0F0F0,
+);
+/*font_family*/
+$font_family:
+(
+  ch : 'Noto Sans TC',  
+  en : 'Roboto',
+  card : 'Lobster',
+
+);
+
+/*font_size*/
+$fz_base : 1rem; /*16px*/
+$fz_xs : $fz_base * 0.875;/*14px*/
+$fz_sm : $fz_base * 1.25;/*20px*/
+$fz_md : $fz_base * 1.5;/*24px*/
+$fz_lg : $fz_base * 1.75;/*28px*/
+$fz_xl : $fz_base * 2.25;/*36px*/
+$fz_xxl : $fz_base * 3.125;/*50px*/
+
+/*line_height*/
+$lh_xs : 24px;
+$lh_sm : 30px;
+$lh_md : 32px;
+$lh_lg : 40px;
+$lh_xl : 42px;
+$lh_xxl : 56px;
