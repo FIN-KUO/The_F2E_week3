@@ -1,11 +1,30 @@
 .btnArea{
+  @include flex-column(center);
   position:absolute;
   bottom: 0px;
-  right: 0px;
-  padding: 0 44px 48px 0;
-  a{
+  right: 0px;  
+  .btn_lg{
     @include btn_shadow(280px, 88px, $fz_lg, $lh_sm, 20px);    
   };
+  .btn_sm{
+    @include btn_shadow(183px, 88px, $fz_lg, $lh_sm, 20px);    
+  };
+  label{
+    font-size: 40px;
+    line-height: $lh_sm;
+    font-family: map-get($map: $font_family, $key: en);
+    color: map-get($map: $c_text, $key: primary_light);
+    padding-bottom: 15px;
+  };
+};
+.btnArea_p1{
+  padding: 0 44px 48px 0;
+};
+.btnArea_p2{
+  padding: 0 40px 87px 0;
+};
+.btnArea_p3{
+  padding: 0 40px 35px 0;
 };
 .img_card2{
   position: absolute;
@@ -37,4 +56,400 @@
   bottom: 21px;
   left: 640px;
   transform: rotate(130deg);
+};
+.img_golden1{
+  position: absolute;
+  top: 285px;
+  left: 59px;
+  width: 83px;
+  transform: rotate(-130deg);
+};
+.img_golden2{
+  position: absolute;
+  top: 56px;
+  left: 403px;
+  width: 46px;
+  transform: rotate(-110deg);
+};
+.img_golden3{
+  position: absolute;
+  top: 113px;
+  right: 580px;
+  width: 60px;
+  transform: rotate(-180deg);
+};
+.img_golden4{
+  position: absolute;
+  bottom: 120px;
+  right: 470px;
+};
+.img_golden5{
+  position: absolute;
+  bottom: 321px;
+  right: 25px;
+  width: 56px;
+  transform: rotate(-180deg);
+};
+.img_coins2{
+  position: absolute;
+  bottom: 17px;
+  right: 63px;
+  z-index: 2;
+};
+.img_dice2{
+  position: absolute;
+  bottom: 76.23px;
+  left: 77.21px;
+};
+.message{
+  @include flex-column(center);
+  padding: 35px 41px 0 47.48px;
+  .dialogue{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &__item{
+      @include flex-row(center);
+      align-items: flex-start;
+      margin-top: 24px;
+      .triangle{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 15px 20px 15px 0;
+        border-color: transparent map-get($map: $c_text, $key: primary_light) transparent transparent;
+        margin-top: 16px;          
+      };
+      p{
+        width: 1098px;
+        word-wrap:break-word;
+        word-break: break-all;
+        background: map-get($map: $c_text, $key: primary_light);
+        border-radius: 16px;
+        padding: 16px 24px;         
+      };
+      .lh_lg{
+        line-height: $lh_lg;
+      };
+      .lh_md{
+        line-height: $lh_md;
+      };
+      .noUser{
+        margin-left: 80px;
+      };
+      .hasImg{
+        @include flex-row(flex-start);
+        line-height: $lh_sm;
+        font-size: $fz_sm;
+        padding: 50px 24px;
+        img{
+          margin-left: 24px;
+        };          
+      };
+      .hasImg_p2{
+        padding: 13px 24px;
+      };
+      .mark{
+        color: map-get($map: $c_text, $key: second);
+      };
+    }; 
+    .testPackage{
+      @include flex-row(flex-end);
+      width: 100%;  
+      margin-top: 43px;
+      z-index: 2;      
+      .test_title + .test_title {
+        margin-left: 23px;
+      };      
+    };    
+    .img_vector{
+      position: absolute;
+      top: 210px;
+      left: 0px;
+    }; 
+    .bg_p{
+      position: absolute;
+      top: 250px;
+      left: 100px;
+    };
+    .bg_txt{
+      position: absolute;
+      top: 460px;
+      left: 150px;
+      font-size: $fz_xxl;
+      line-height: $lh_md;
+      font-family: map-get($map: $font_family, $key: en);
+      color: map-get($map: $c_text, $key: primary_light);
+    };
+    .answer{
+      @include flex-row(center);
+      position: absolute;
+      top: 480px;
+      left: 350px;
+      z-index: 2;
+      .answerBox{
+        width: 309px;
+        height: 76px;
+        border-radius: 8px;
+        border-style: dashed;
+        border-width: 3px;
+      };
+      .answerPackage1{
+        border-color: #FF7E06;
+      };
+      .answerPackage2{
+        border-color: #009A50;
+      };
+      .answerBox + .answerBox{
+        margin-left: 35px;
+      };
+    };
+  };      
+};
+.test_title{
+  @include flex-row(center);
+  width: 309px;
+  padding: 22px 0;
+  font-size: $fz_base;
+  line-height: $lh_md;
+  border-radius: 8px;
+  color: map-get($map: $c_text, $key: primary_light);
+  img{
+    padding-left: 10px;
+  };
+};
+.productList{
+  @include flex-row(center);
+  margin-left: -193px;
+  label{
+    font-size: 30px;
+    line-height: $lh_sm;
+    color: map-get($map: $c_text, $key: primary_light);
+    padding-right: 13px;
+  };
+  .label_lh{
+    line-height: 45px;
+  };
+  .packageArea{
+    @include flex-column(center);
+    position: relative;
+    .top{
+      @include flex-row(center);
+      width: 516px;
+      padding: 5px 0;
+      font-size: $fz_sm;
+      line-height: $lh_xl;
+      color: map-get($map: $c_text, $key: primary_light);
+      background: map-get($map: $c_text, $key: second);
+      border: 5px solid map-get($map: $c_text, $key: primary_light);
+      border-radius: 16px 16px 0px 0px;
+      margin-bottom: -4px;
+      span{
+        font-size: $fz_md;
+      };
+    };
+    .mid{
+      @include flex-row(center);
+      width: 794px;
+      height: 289px;
+      .parker + .parker , .parkerBox + .parkerBox{
+        margin-left: 14.24px;
+      };
+    };
+    .hasBorder{
+      border: 4px solid map-get($map: $c_text, $key: primary_light);
+      border-radius: 30px;
+    };
+    .bottom{
+      @include flex-row(center);
+      justify-content: space-between;
+      width: 516px;
+      padding: 5px 24px;
+      font-size: $fz_sm;
+      line-height: $lh_xl;
+      color: map-get($map: $c_text, $key: primary_light);
+      background: map-get($map: $c_text, $key: primary_dark);
+      border: 5px solid map-get($map: $c_text, $key: primary_light);
+      border-radius: 0px 0px 16px 16px;
+      margin-top: -4px;
+    };
+    label{
+      font-size: $fz_sm ;
+      line-height: $lh_xl;
+      color: map-get($map: $c_text, $key: primary_light);
+      padding-top: 7px;
+    };
+  };  
+  .img_coins{
+    position: absolute;
+    top: -95px;
+    right: -140px;
+  };
+  .img_coins2{
+    position: absolute;
+    top: -190px;
+    right: -190px;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    width: 269px;
+    height: 277px;
+  };
+};
+.productList_p1{
+  padding: 175px 0 0 0;
+};
+.productList_p2{
+  padding: 66.12px 0 0 0;
+};
+.parker{
+  @include flex-column(space-between);
+  width: 168px;
+  height: 236px;
+  background: map-get($map: $c_text, $key: primary_light);
+  border-radius: 5px;
+  &__item{
+    width: 100%;
+    @include flex-column(center);
+    align-items: flex-start;
+    padding: 7px 0 0 10px;
+    p{
+      font-family: map-get($map: $font_family, $key: card);
+      font-size: $fz_xl;
+      line-height: $lh_sm;
+    };
+  };
+  .re{
+    transform: rotate(-180deg);
+  };
+  &__txt{
+    width: 160px;
+    word-wrap:break-word;
+    word-break: break-all;
+    line-height: $lh_xs;
+    text-align: center;
+  };
+  &:hover{
+    transform:scale(1.2,1.2);    
+  };
+};
+.parker_active{
+  background: map-get($map: $c_text, $key: primary_dark);
+  p{
+    color: map-get($map: $c_text, $key: primary_light);
+  };
+  img{
+    filter: invert(100%) sepia(76%) saturate(0%) hue-rotate(302deg) brightness(105%) contrast(101%);;
+  };
+};
+.parkerBox{
+  width: 168px;
+  height: 236px;
+  border-radius: 5px;
+  border: 2px dashed map-get($map: $c_text, $key: primary_light);
+};
+.finish_content{
+  @include flex-row(center);
+  padding: 172px 0 0;
+  p{
+    font-size: 34px;
+    line-height: 68px;
+    color: map-get($map: $c_text, $key: primary_light);
+    text-align: center;
+  }; 
+};
+.card{
+  @include flex-row(center);
+  align-items: flex-start;
+  margin-top: 29px;
+  margin-left: 80px;
+  &__item{
+    @include flex-column(center);
+    width: 353px;    
+    .card_content{
+      @include flex-column(center);
+      align-items: flex-start;
+      padding-top: 15px;
+      p,li{
+        color: map-get($map: $c_text, $key: primary_light);
+        font-size: $fz_xs;
+        line-height: $lh_xs;
+      };
+      ul{
+        list-style: disc;
+        list-style-position: inside;
+      };
+    };
+  };
+  &__item + &__item{
+    margin-left: 20px;
+  };
+};
+.card_title{
+  @include flex-row(center);
+  width: 353px;
+  padding: 22px 0;
+  font-size: $fz_base;
+  line-height: $lh_md;
+  border-radius: 8px;
+  color: map-get($map: $c_text, $key: primary_light);
+  img{
+    padding-left: 10px;
+  };
+};
+.bg_1{
+  background: map-get($map: $c_text, $key: second);
+};
+.bg_2{
+  background: #FF7E06;
+};
+.bg_3{
+  background: #009A50;
+};
+.parkerGroup{
+  @include flex-row(center);
+  &__item{
+    @include flex-column(center);
+    .group_title{
+      font-size: 30px;
+      line-height: $lh_sm;
+      color: map-get($map: $c_text, $key: primary_light);
+      padding: 35px 0 29.12px;
+    };
+    .radioParker{
+      @include flex-row(center);
+      .parker + .parker{
+        margin-left: 35.16px;
+      };
+    };
+  };
+  &__item + &__item{
+    margin-left: 137.16px;
+  };
+};
+.overlay{
+  position:fixed;
+  z-index:99999;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  background: rgba(0, 0, 0, 0.58);
+  backdrop-filter: blur(6px);  
+  @include flex-column(center);
+  .promptMessage{
+    @include flex-column(center);
+    width: 486px;
+    height: 216px;
+    background: map-get($map: $c_text, $key: primary_dark);
+    border-radius: 20px;
+    p{
+      font-size: $fz_md;
+      line-height: 29px;
+      color: map-get($map: $c_text, $key: primary_light);
+    };  
+    a{
+      @include btn_danger(301px,58px,$fz_sm,$lh_xs,0);
+      margin-top: 30px;
+    };
+  };
+  
 };

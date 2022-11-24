@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrum 新手村 / 測試流程</title>
+  <link rel="icon" href="./image/Favicon.png">
+  <link rel="stylesheet" href="./css/all.css">
+</head>
+<body>
+  <div class="message">
+    <div class="dialogue">
+      <div class="dialogue__item">
+        <img src="./image/Jason.png" alt="">
+        <span class="triangle"></span>
+        <p class="lh_md">那你來試試看，在這經典的Surum流程圖中，這些流程分別代表哪一個會議呢？</p>
+      </div>     
+      <div class="dialogue__item">
+        <p class="noUser lh_md"><span class="mark">提示：請用拖移的方式將標籤拖移至對應的方框裡</span></p>
+      </div>
+      <div class="testPackage">
+        <p class="test_title bg_2" data-id = "1">短衝檢視會議(Sprint Review)<img src="./image/arrow.png" alt=""></p>
+        <p class="test_title bg_3" data-id = "2">短衝自省會議(Sprint Retrospective)<img src="./image/arrow.png" alt=""></p>
+      </div>
+      <img class="img_vector" src="./image/Vector.png" alt="">
+      <p class="test_title bg_1 bg_p">每日站立會議(Daily Scrum)</p>
+      <p class="bg_txt">Sprint</p>
+      <div class="answer">
+        <div class="answerBox answerPackage1"></div>
+        <div class="answerBox answerPackage2"></div>
+      </div>
+    </div>    
+  </div>
+  <div class="btnArea btnArea_p2">
+    <a class="btn_sm finish" href="javascript:void(0);">完成</a>
+  </div>
+  <div id="container">
+    <div class="overlay" v-if="overlayDisplay == 1">
+      <div class="promptMessage">
+        <p class="txt">置入錯誤，請重新置入</p>
+        <a href="javascript:void(0);" v-on:click="clear();">確定</a>
+      </div>    
+    </div>
+    <div class="overlay" v-if="overlay2Display == 1">
+      <div class="promptMessage">
+        <p class="txt">尚未置入任何項目，請置入項目</p>
+        <a href="javascript:void(0);" v-on:click="clear2();">確定</a>
+      </div>    
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="https://www.itxst.com/package/sortable/sortable.min.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> <!--vue-->
+  <script src="./js/test.js"></script>
+</body>
+</html>

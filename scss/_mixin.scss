@@ -25,11 +25,11 @@
   justify-content: $jc;
   align-items: center;
 };
-@mixin flex-column($align){
+@mixin flex-column($jc){
   display: flex;
   flex-direction: column;
-  align-items: $align;
-  justify-content: center;
+  align-items: center;
+  justify-content: $jc;
 };
 
 @mixin btn_shadow($width , $height , $font-size ,$line-height,$border-radius){
@@ -43,4 +43,15 @@
   border-radius: $border-radius;
   background: map-get($map: $c_text, $key: primary_dark);
   box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.5);
+};
+@mixin btn_danger($width , $height , $font-size ,$line-height,$border-radius){
+  @include flex-row(center);
+  height: $height;
+  width: $width;
+  color: map-get($c_text,primary_light);
+  font-size: $font-size;
+  font-weight: 400;
+  line-height: $line-height;
+  border-radius: $border-radius;
+  background: map-get($map: $c_text, $key: second);
 };

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrum 新手村 / 回饋</title>
+  <link rel="icon" href="./image/Favicon.png">
+  <link rel="stylesheet" href="./css/all.css">
+</head>
+<body>
+  <div class="message">
+    <div class="dialogue">
+      <div class="dialogue__item">
+        <img src="./image/Alien.png" alt="">
+        <span class="triangle"></span>
+        <p class="lh_md">哇賽新來的，你真的很幸運，今天剛好是開發B組的 Retro，你也見識一下，看看Retro都該做些什麼吧~我們會在會議裡請團隊成員提出哪些是做得好的地方、哪些可以繼續改善的地方？並記錄再Confluence中。</p>
+      </div>     
+      <div class="dialogue__item">
+        <p class="noUser lh_md">請選擇適合 Retro的回饋卡！思考看看哪一張牌是『正面表述』呢？</p>
+      </div>
+    </div>
+  </div>
+  <div class="parkerGroup">
+    <div class="parkerGroup__item">
+      <p class="group_title">做得好的地方</p>
+      <div class="radioParker">
+        <div id="radio1" class="parker">
+          <div class="parker__item">
+            <p>A</p>
+            <img src="./image/peach.png" alt="">
+          </div>
+          <p class="parker__txt">這次我幫了很多人救火耶</p>
+          <div class="parker__item re">
+            <p>A</p>
+            <img src="./image/peach.png" alt="">
+          </div>
+        </div>
+        <div id="radio2" class="parker">
+          <div class="parker__item">
+            <p>A</p>
+            <img src="./image/peach.png" alt="">
+          </div>
+          <p class="parker__txt">大家在開發上都會互相 cover，讓任務都有準時在時間內完成。</p>
+          <div class="parker__item re">
+            <p>A</p>
+            <img src="./image/peach.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="parkerGroup__item">
+      <p class="group_title">有哪些可以做得更好？</p>
+      <div class="radioParker">
+        <div id="radio3" class="parker">
+          <div class="parker__item">
+            <p>A</p>
+            <img src="./image/peach.png" alt="">
+          </div>
+          <p class="parker__txt">可以記錄這次的開發時間，讓預估團隊點數可以更精準。</p>
+          <div class="parker__item re">
+            <p>A</p>
+            <img src="./image/peach.png" alt="">
+          </div>
+        </div>
+        <div id="radio4" class="parker">
+          <div class="parker__item">
+            <p>A</p>
+            <img src="./image/peach.png" alt="">
+          </div>
+          <p class="parker__txt">開發時間預估不準確，請後端下次改進，避免Delay到我。</p>
+          <div class="parker__item re">
+            <p>A</p>
+            <img src="./image/peach.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="btnArea btnArea_p3">
+    <a class="btn_lg understand" href="javascript:void(0);">我想我了解了</a>
+  </div>
+  <div id="container">
+    <div class="overlay" v-if="overlayDisplay == 1">
+      <div class="promptMessage">
+        <p class="txt">選擇錯誤，請再思考一下</p>
+        <a href="javascript:void(0);" v-on:click="clear();">確定</a>
+      </div>    
+    </div>
+    <div class="overlay" v-if="overlay2Display == 1">
+      <div class="promptMessage">
+        <p class="txt">尚未選擇，請選擇適合的答案</p>
+        <a href="javascript:void(0);" v-on:click="clear2();">確定</a>
+      </div>    
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="https://www.itxst.com/package/sortable/sortable.min.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> <!--vue-->
+  <script src="./js/giveBack.js"></script>
+</body>
+</html>

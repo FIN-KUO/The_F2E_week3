@@ -21,5 +21,19 @@ body{
     font-size: $fz_lg;
     line-height: $lh_xxl;
     color: map-get($map: $c_text, $key: primary_light);
+  };  
+};
+.footer{
+  width: 100%;
+  @include flex-row(center);
+  position: absolute;
+  bottom: 0;
+  background: map-get($map: $c_text, $key: primary_light);
+  padding: 14px 0;
+  .img_jira{
+    width: 101px;
+  };
+  .img_confluence{
+    width: 202px;
   };
 };

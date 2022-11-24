@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrum 新手村 / 待辦項目</title>
+  <link rel="icon" href="./image/Favicon.png">
+  <link rel="stylesheet" href="./css/all.css">
+</head>
+<body>
+  <div class="productList productList_p1">
+    <label for="">產品待辦清單</label>
+    <div class="packageArea">
+      <div class="top">用<span> 拖移 </span>的方式調整優先順序</div>
+      <div class="mid hasBorder orderPackage">
+        <div class="parker" data-id="2">
+          <div class="parker__item">
+            <p>A</p>
+            <img src="./image/peach.png" alt="">
+          </div>
+          <p class="parker__txt">會員系統<br>(登入、註冊、權限管理)</p>
+          <div class="parker__item re">
+            <p>A</p>
+            <img src="./image/peach.png" alt="">
+          </div>
+        </div>
+        <div class="parker" data-id="3">
+          <div class="parker__item">
+            <p>A</p>
+            <img src="./image/peach.png" alt="">
+          </div>
+          <p class="parker__txt">應徵者的線上履歷編<br>輯器</p>
+          <div class="parker__item re">
+            <p>A</p>
+            <img src="./image/peach.png" alt="">
+          </div>
+        </div>
+        <div class="parker" data-id="4">
+          <div class="parker__item">
+            <p>A</p>
+            <img src="./image/peach.png" alt="">
+          </div>
+          <p class="parker__txt">前台職缺列表<br>(職缺詳細內容、點選可發送應徵意願)</p>
+          <div class="parker__item re">
+            <p>A</p>
+            <img src="./image/peach.png" alt="">
+          </div>
+        </div>
+        <div class="parker" data-id="1">
+          <div class="parker__item">
+            <p>A</p>
+            <img src="./image/peach.png" alt="">
+          </div>
+          <p class="parker__txt">後台職缺管理功能<br>(資訊上架、下架、顯示應徵者資料)</p>
+          <div class="parker__item re">
+            <p>A</p>
+            <img src="./image/peach.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>高←</p>
+        <p>優先權</p>
+        <p>→低</p>
+      </div>
+      <img class="img_coins" src="./image/coins.png" alt="">
+    </div>    
+  </div>  
+  <img class="img_dice2" src="./image/dice2.png" alt="">
+  <div class="btnArea btnArea_p2">
+    <a class="btn_sm undone_finish" href="javascript:void(0);">完成</a>
+  </div>
+  <div id="container">
+    <div class="overlay" v-if="overlayDisplay == 1">
+      <div class="promptMessage">
+        <p>哦歐！排序錯誤，請再調整順序</p>
+        <a href="javascript:void(0);" v-on:click="clear();">確定</a>
+      </div>    
+    </div>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="https://www.itxst.com/package/sortable/sortable.min.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> <!--vue-->
+  <script src="./js/undone.js"></script>
+</body>
+</html>

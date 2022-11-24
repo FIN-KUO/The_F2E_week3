@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrum 新手村 / 安排任務</title>
+  <link rel="icon" href="./image/Favicon.png">
+  <link rel="stylesheet" href="./css/all.css">
+</head>
+<body>
+  <div class="productList productList_p2">
+    <label for="">產品待辦清單</label>
+    <div class="packageArea">
+      <div class="mid scorePackage">
+        <div class="parker" data-score="8">
+          <div class="parker__item">
+            <p>8</p>
+            <img src="./image/peach.png" alt="">
+          </div>
+          <p class="parker__txt">會員系統<br>(登入、註冊、權限管理)</p>
+          <div class="parker__item re">
+            <p>8</p>
+            <img src="./image/peach.png" alt="">
+          </div>
+        </div>
+        <div class="parker" data-score="8">
+          <div class="parker__item">
+            <p>8</p>
+            <img src="./image/peach.png" alt="">
+          </div>
+          <p class="parker__txt">後台職缺管理功能<br>(資訊上架、下架、顯示應徵者資料)</p>
+          <div class="parker__item re">
+            <p>8</p>
+            <img src="./image/peach.png" alt="">
+          </div>
+        </div>
+        <div class="parker" data-score="13">
+          <div class="parker__item">
+            <p>13</p>
+            <img src="./image/peach.png" alt="">
+          </div>
+          <p class="parker__txt">應徵者的線上履歷編<br>輯器</p>
+          <div class="parker__item re">
+            <p>13</p>
+            <img src="./image/peach.png" alt="">
+          </div>
+        </div>
+        <div class="parker" data-score="5">
+          <div class="parker__item">
+            <p>5</p>
+            <img src="./image/peach.png" alt="">
+          </div>
+          <p class="parker__txt">前台職缺列表<br>(職缺詳細內容、點選可發送應徵意願)</p>
+          <div class="parker__item re">
+            <p>5</p>
+            <img src="./image/peach.png" alt="">
+          </div>
+        </div>    
+      </div>
+    </div>    
+  </div>
+  <div class="productList">
+    <label class="label_lh" for="">開發 A 組<br>短衝待辦清單</label>
+    <div class="packageArea">
+      <div class="mid hasBorder">
+        <div class="parkerBox doPackage1"></div>
+        <div class="parkerBox doPackage2"></div>
+        <div class="parkerBox doPackage3"></div>
+        <div class="parkerBox doPackage4"></div>
+      </div>
+      <label>請把需求拖移到方框中(加總後不得超過20點)</label>
+      <img class="img_coins2" src="./image/coins2.png" alt="">
+    </div>
+  </div>
+  <div id="container" class="btnArea btnArea_p2">
+    <label for=""><span class="total-score" v-bind:style="{color:scoreColor}">{{ totalScore }}</span>/20</label>
+    <a class="btn_sm finish" href="javascript:void(0);">準備好了！<br>開始 Sprint</a>
+    <div class="overlay" v-if="overlayDisplay == 1">
+      <div class="promptMessage">
+        <p class="txt">超過20點，請再調整清單</p>
+        <a href="javascript:void(0);" v-on:click="clear();">確定</a>
+      </div>    
+    </div>
+    <div class="overlay" v-if="overlay2Display == 1">
+      <div class="promptMessage">
+        <p class="txt">尚未置入任何項目，請置入項目</p>
+        <a href="javascript:void(0);" v-on:click="clear();">確定</a>
+      </div>    
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="https://www.itxst.com/package/sortable/sortable.min.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> <!--vue-->
+  <script src="./js/tasksScore.js"></script>
+</body>
+</html>
